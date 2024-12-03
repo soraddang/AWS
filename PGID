@@ -1,0 +1,18 @@
+<<child.sh>>
+#!/bin/bash
+for x in `seq 1 100`;
+do
+    sleep 1
+    echo "Hello World"
+done
+
+<<parent.sh>>
+#!/bin/bash
+./child.sh
+
+chmod 744 child.sh
+chmod 744 parent.sh
+./parent.sh 
+
+#ps -A -o pid,ppid,pgid,sid,command
+
