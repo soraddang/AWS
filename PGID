@@ -10,6 +10,8 @@ done
 #!/bin/bash
 ./child.sh
 
+--------------------------------
+
 chmod 744 child.sh
 chmod 744 parent.sh
 ./parent.sh 
